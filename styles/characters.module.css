@@ -1,0 +1,19 @@
+.characters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.characterCard {
+  display: grid;
+  justify-items: center;
+  border: 1px dotted slateblue;
+}
+
+.characterCard a {
+  text-align: center;
+}

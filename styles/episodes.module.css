@@ -1,0 +1,20 @@
+.episodes {
+  display: grid;
+  justify-content: center;
+  list-style-type: none;
+}
+.episode {
+  display: grid;
+  justify-items: center;
+  border-bottom: 1px solid #555555;
+}
+.link {
+  color: darkcyan;
+  font-weight: bold;
+}
+.epCard {
+  display: grid;
+  justify-items: center;
+  background-color: aqua;
+  width: 50%;
+}

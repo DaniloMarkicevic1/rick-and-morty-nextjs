@@ -1,27 +1,24 @@
-import Image from "next/image";
-import Link from "next/link";
+import { SWRConfig } from "swr";
+import Episodes from "../../Components/episodes/Episodes";
 
-const Episodes = ({ episodes }) => {
+const EpisodesPage = ({ fallback }) => {
   return (
-    <ol>
-      {episodes.results.map((episode) => (
-        <li key={episode.id}>
-          <Link href={`/episode/${episode.id}`}>
-            <a>{episode.name}</a>
-          </Link>
-          <p>Air date: {episode.air_date}</p>
-        </li>
-      ))}
-    </ol>
+    <SWRConfig value={fallback}>
+      <Episodes />
+    </SWRConfig>
   );
 };
+
 export const getStaticProps = async () => {
   const res = await fetch(`https://rickandmortyapi.com/api/episode`);
   const episodes = await res.json();
+
   return {
     props: {
-      episodes,
+      fallback: {
+        "https://rickandmortyapi.com/api/episode": episodes,
+      },
     },
   };
 };
-export default Episodes;
+export default EpisodesPage;

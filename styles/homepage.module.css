@@ -1,0 +1,9 @@
+.title {
+  text-align: center;
+  background-color: burlywood;
+}
+.pages {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
