@@ -1,5 +1,5 @@
 import { SWRConfig } from "swr";
-import Location from "../../Components/locations/location";
+import Location from "../../Components/locations/Location";
 
 const LocationPage = ({ fallback, url }) => {
   return (
